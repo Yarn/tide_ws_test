@@ -1,0 +1,27 @@
+[package]
+name = "tide_ws_test"
+version = "0.1.0"
+license = "MIT"
+authors = ["ryan <yarnnd@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+fern = "0.6.0"
+log = "0.4.11"
+futures = "^0.3.5"
+async-std = { version = "1.6.2", features = ["unstable"] }
+tide = "0.12.0"
+http-types = "^2.3.0"
+chrono = { version = "0.4.13" }
+anyhow = "1.0.32"
+
+[replace]
+# "async-h1:2.1.1" = { path = "../async-h1" }
+# "http-types:2.3.0" = { path = "../http-types" }
+# "tide:0.12.0" = { path = "../tide" }
+# "websocket_handshake:0.1.0" = { path = "../websocket_handshake" }
+"async-h1:2.1.1" = { git = "https://github.com/Yarn/async-h1.git", rev = "c6d3212523f41125a3889f9db64b18c22679eb40" }
+"http-types:2.3.0" = { git = "https://github.com/Yarn/http-types.git", rev = "214fcbff47eb662599d8a719a092a929cdfdd12e" }
+"tide:0.12.0" = { git = "https://github.com/Yarn/tide.git", rev = "7fc4a5e85c0e71d136faa114c1aa749d701534fd" }
